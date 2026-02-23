@@ -192,7 +192,7 @@ app.get('/allIssuess', async (req, res) => {
     app.get('/issue/:id', async (req, res) => {
       const id = req.params.id;
       const result = await AllissuesCollection.findOne({ _id: new ObjectId(id) });
-      res.send(result);
+       res.send(result);
     });
 
     // Update issue status
