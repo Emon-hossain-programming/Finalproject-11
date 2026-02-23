@@ -136,7 +136,7 @@ app.patch('/issue/upvote/:id', verifyFbToke, async (req, res) => {
     const issue = await AllissuesCollection.findOne({ _id: new ObjectId(id) });
 
     if (!issue) {
-        return res.status(404).send({ message: "Issue not found" });
+         return res.status(404).send({ message: "Issue not found" });
     }
 
     //  You cannot upvote your own issues
