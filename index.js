@@ -246,7 +246,7 @@ app.patch('/allIssues/:id',verifyFbToke, async (req, res) => {
     app.post('/registerdUsers', async (req, res) => {
       const data = req.body;
       const existingUser = await usersCollection.findOne({ email: data.email });
-      if (existingUser) return res.send({ message: 'user already exists', insertedId: null });
+       if (existingUser) return res.send({ message: 'user already exists', insertedId: null });
       const result = await usersCollection.insertOne(data);
       res.send(result);
     });
