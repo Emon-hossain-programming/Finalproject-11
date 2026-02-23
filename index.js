@@ -93,7 +93,7 @@ const verifyStaff = async (req, res, next) => {
     app.post('/user', async (req, res) => {
       const data = req.body;
       const result = await AllissuesCollection.insertOne(data);
-      res.send(result);
+       res.send(result);
     });
 
     // Get all issues
