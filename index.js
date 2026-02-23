@@ -29,7 +29,7 @@ const verifyFbToke=async(req,res,next)=>{
     // firebase verify
     try{
         const idToken=token.split(' ')[1]
-         const decoded=await admin.auth().verifyIdToken(idToken)
+     const decoded=await admin.auth().verifyIdToken(idToken)
          
          req.user = decoded;
          req.decoded_email=decoded.email
